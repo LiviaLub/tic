@@ -1,0 +1,37 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+<h1> Tic Tac Toe</h1>
+    <br>
+<table>
+   <tr>
+     <td width='100px' height="100px"><a class="{% if data.00 == 'x' %}links {% elif data.00 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 0 0 %}">{{ data.00 }}</a></td>
+     <td width='100px' height="100px"><a class="{% if data.01 == 'x' %}links {% elif data.01 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 0 1 %}">{{ data.01 }}</a></td>
+     <td width='100px' height="100px"><a class="{% if data.02 == 'x' %}links {% elif data.02 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 0 2 %}">{{ data.02 }}</a></td>
+  </tr>
+    <tr>
+      <td width='100px' height="100px"><a class="{% if data.10 == 'x' %}links {% elif data.10 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 1 0 %}">{{ data.10 }}</a></td>
+      <td width='100px' height="100px"><a class="{% if data.11 == 'x' %}links {% elif data.11 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 1 1 %}">{{ data.11 }}</a></td>
+      <td width='100px' height="100px"><a class="{% if data.12 == 'x' %}links {% elif data.12 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 1 2 %}">{{ data.12 }}</a></td>
+    </tr>
+      <tr>
+      <td width='100px' height="100px"><a class="{% if data.20 == 'x' %}links {% elif data.20 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 2 0 %}">{{ data.20 }}</a></td>
+      <td width='100px' height="100px"><a class="{% if data.21 == 'x' %}links {% elif data.21 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 2 1 %}">{{ data.21 }}</a></td>
+      <td width='100px' height="100px"><a class="{% if data.22 == 'x' %}links {% elif data.22 == 'o' %}links-green {% else %}links-grey{% endif %}" href="{% url 'game:move' 2 2 %}">{{ data.22 }}</a></td>
+      </tr>
+
+</table>
+
+
+    {% if winner == "T" %}
+        <h1 style="color:#676161">It is a tie</h1>
+        {% else %}
+        {% if winner %}
+        <h1 class="{% if winner == 'x' %} winner-red {% else %} winner-green{% endif %}">Winner: {{ winner }}</h1>
+    {% endif %}
+    {% endif %}
+    <button class="button"><a class="link-button" href="{% url 'game:new_game' %}">New Game</a></button>
+
+{% endblock %}

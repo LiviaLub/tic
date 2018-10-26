@@ -1,0 +1,99 @@
+h1{
+    color:#b72f2f;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold";
+}
+
+.links {
+    color: #b72f2f;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left:15px;
+    font-size: 60px;
+    font-family: 'Mali', bold;
+
+
+}
+
+
+table {
+  border-collapse: collapse;
+}
+table td {
+  border: 2px solid lightgrey;
+}
+table tr:first-child td {
+  border-top: 0;
+}
+table tr td:first-child {
+  border-left: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:last-child {
+  border-right: 0;
+}
+
+
+
+
+
+table ,tr, td{
+
+
+    border-collapse: collapse;
+    margin-left: 550px;
+}
+
+.button {
+    margin-top: 40px;
+    margin-left: 650px;
+    background-color: #b72f2f;
+    border:none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 20px;
+
+
+}
+
+
+.link-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+}
+.links-green{
+    color: darkgreen;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left:15px;
+    font-size: 50px;
+    font-family: 'Mali', bold;
+}
+.links-grey{
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    font-family: 'Mali', bold;
+
+}
+.winner-red{
+    color: #b72f2f;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold"
+}
+.winner-green{
+     color: darkgreen;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold"
+}
